@@ -1,0 +1,15 @@
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\bin\Debug\Expenses.exe.config
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\bin\Debug\Expenses.exe
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\bin\Debug\Expenses.pdb
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\bin\Debug\Expenses.xml
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.dailyexpense.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.expensedata.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.Login.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.Resources.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.vbproj.GenerateResource.cache
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.vbproj.CoreCompileInputs.cache
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.vbproj.CopyComplete
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.exe
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.xml
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.pdb
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.vbprojAssemblyReference.cache
