@@ -13,3 +13,7 @@ D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.exe
 D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.xml
 D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.pdb
 D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.vbprojAssemblyReference.cache
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.applicants.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.applicantData.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.stock.resources
+D:\MyStaff\CaterCode\Dot Net Projects\Expenses\Expenses\obj\Debug\Expenses.stockData.resources

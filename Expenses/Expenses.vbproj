@@ -85,6 +85,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="applicantData.Designer.vb">
+      <DependentUpon>applicantData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="applicantData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applicants.Designer.vb">
+      <DependentUpon>applicants.vb</DependentUpon>
+    </Compile>
+    <Compile Include="applicants.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dailyexpense.Designer.vb">
       <DependentUpon>dailyexpense.vb</DependentUpon>
     </Compile>
@@ -119,8 +131,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="stock.Designer.vb">
+      <DependentUpon>stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stockData.Designer.vb">
+      <DependentUpon>stockData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stockData.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="applicantData.resx">
+      <DependentUpon>applicantData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applicants.resx">
+      <DependentUpon>applicants.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dailyexpense.resx">
       <DependentUpon>dailyexpense.vb</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +165,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.resx">
+      <DependentUpon>stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stockData.resx">
+      <DependentUpon>stockData.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

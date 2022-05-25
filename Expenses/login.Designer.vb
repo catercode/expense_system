@@ -23,7 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.BunifuCards1 = New Bunifu.Framework.UI.BunifuCards()
         Me.pnldisable = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -38,7 +38,6 @@ Partial Class Login
         Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.txtpassword = New MaterialSkin.Controls.MaterialTextBox()
         Me.txtusername = New MaterialSkin.Controls.MaterialTextBox()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuImageButton2 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.tmmrq = New System.Windows.Forms.Timer(Me.components)
@@ -49,10 +48,11 @@ Partial Class Login
         Me.tmpop = New System.Windows.Forms.Timer(Me.components)
         Me.logout = New System.Windows.Forms.Timer(Me.components)
         Me.tmcountdown = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BunifuCards1.SuspendLayout()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuCards1
@@ -62,6 +62,7 @@ Partial Class Login
         Me.BunifuCards1.BorderRadius = 10
         Me.BunifuCards1.BottomSahddow = True
         Me.BunifuCards1.color = System.Drawing.SystemColors.HotTrack
+        Me.BunifuCards1.Controls.Add(Me.PictureBox2)
         Me.BunifuCards1.Controls.Add(Me.pnldisable)
         Me.BunifuCards1.Controls.Add(Me.btnlogin)
         Me.BunifuCards1.Controls.Add(Me.Label1)
@@ -74,10 +75,9 @@ Partial Class Login
         Me.BunifuCards1.Controls.Add(Me.BunifuThinButton21)
         Me.BunifuCards1.Controls.Add(Me.txtpassword)
         Me.BunifuCards1.Controls.Add(Me.txtusername)
-        Me.BunifuCards1.Controls.Add(Me.BunifuImageButton1)
         Me.my_animate.SetDecoration(Me.BunifuCards1, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuCards1.LeftSahddow = True
-        Me.BunifuCards1.Location = New System.Drawing.Point(668, 108)
+        Me.BunifuCards1.Location = New System.Drawing.Point(665, 108)
         Me.BunifuCards1.Margin = New System.Windows.Forms.Padding(2)
         Me.BunifuCards1.Name = "BunifuCards1"
         Me.BunifuCards1.RightSahddow = True
@@ -302,34 +302,19 @@ Partial Class Login
         Me.txtusername.TabIndex = 146
         Me.txtusername.Text = ""
         '
-        'BunifuImageButton1
-        '
-        Me.BunifuImageButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
-        Me.my_animate.SetDecoration(Me.BunifuImageButton1, BunifuAnimatorNS.DecorationType.None)
-        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
-        Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(144, 19)
-        Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(103, 121)
-        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton1.TabIndex = 145
-        Me.BunifuImageButton1.TabStop = False
-        Me.BunifuImageButton1.Zoom = 10
-        '
         'BunifuImageButton2
         '
         Me.BunifuImageButton2.BackColor = System.Drawing.Color.Transparent
         Me.my_animate.SetDecoration(Me.BunifuImageButton2, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuImageButton2.Image = CType(resources.GetObject("BunifuImageButton2.Image"), System.Drawing.Image)
         Me.BunifuImageButton2.ImageActive = Nothing
-        Me.BunifuImageButton2.Location = New System.Drawing.Point(99, 173)
+        Me.BunifuImageButton2.Location = New System.Drawing.Point(120, 183)
         Me.BunifuImageButton2.Name = "BunifuImageButton2"
         Me.BunifuImageButton2.Size = New System.Drawing.Size(542, 616)
         Me.BunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.BunifuImageButton2.TabIndex = 178
         Me.BunifuImageButton2.TabStop = False
-        Me.BunifuImageButton2.Zoom = 10
+        Me.BunifuImageButton2.Zoom = 0
         '
         'BunifuImageButton3
         '
@@ -338,13 +323,13 @@ Partial Class Login
         Me.my_animate.SetDecoration(Me.BunifuImageButton3, BunifuAnimatorNS.DecorationType.None)
         Me.BunifuImageButton3.Image = CType(resources.GetObject("BunifuImageButton3.Image"), System.Drawing.Image)
         Me.BunifuImageButton3.ImageActive = Nothing
-        Me.BunifuImageButton3.Location = New System.Drawing.Point(1080, 183)
+        Me.BunifuImageButton3.Location = New System.Drawing.Point(1057, 183)
         Me.BunifuImageButton3.Name = "BunifuImageButton3"
         Me.BunifuImageButton3.Size = New System.Drawing.Size(542, 616)
         Me.BunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.BunifuImageButton3.TabIndex = 179
         Me.BunifuImageButton3.TabStop = False
-        Me.BunifuImageButton3.Zoom = 10
+        Me.BunifuImageButton3.Zoom = 0
         '
         'tmmrq
         '
@@ -360,22 +345,22 @@ Partial Class Login
         '
         Me.my_animate.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.my_animate.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.my_animate.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.my_animate.DefaultAnimation = Animation1
         '
         'tmpop
         '
@@ -383,23 +368,35 @@ Partial Class Login
         'logout
         '
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.my_animate.SetDecoration(Me.PictureBox2, BunifuAnimatorNS.DecorationType.None)
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(17, 10)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(359, 101)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 254
+        Me.PictureBox2.TabStop = False
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1678, 960)
+        Me.Controls.Add(Me.BunifuCards1)
         Me.Controls.Add(Me.BunifuImageButton3)
         Me.Controls.Add(Me.BunifuImageButton2)
-        Me.Controls.Add(Me.BunifuCards1)
         Me.my_animate.SetDecoration(Me, BunifuAnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Login"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.BunifuCards1.ResumeLayout(False)
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -416,7 +413,6 @@ Partial Class Login
     Friend WithEvents BunifuThinButton21 As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents txtpassword As MaterialSkin.Controls.MaterialTextBox
     Friend WithEvents txtusername As MaterialSkin.Controls.MaterialTextBox
-    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents BunifuImageButton2 As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents BunifuImageButton3 As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents tmmrq As Timer
@@ -428,4 +424,5 @@ Partial Class Login
     Friend WithEvents logout As Timer
     Friend WithEvents tmcountdown As Timer
     Friend WithEvents pnldisable As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

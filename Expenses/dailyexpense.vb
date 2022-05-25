@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Drawing.Printing
 
 Public Class dailyexpense
     Dim MyString As String = "Server=LocalHost;user id = root;password = '';Database =startlet ;Port=3306 "
@@ -185,6 +186,9 @@ Public Class dailyexpense
         txtdisable.Text = "Please wait while data load..."
         txtdisable.ForeColor = Color.Green
 
+        ExpenseID()
+        Label2.Text = "GHs " & totalspent() & ".00"
+        lbltotal.Text = ListView1.Items.Count
         myalert()
 
     End Sub
@@ -255,6 +259,7 @@ Public Class dailyexpense
         compute()
         Dim pr As Integer = 0
         myincrement += 1
+
         If myincrement = 1 Then
             pr = 50
             e.Graphics.DrawString(vbTab & vbTab & vbTab & "SOCCER TALENT HUNT", New Drawing.Font("Berlin Sans FB Demi", 14), Brushes.Black, 50, pr)
@@ -263,22 +268,15 @@ Public Class dailyexpense
             pr += 16
             e.Graphics.DrawString(vbTab & vbTab & vbTab & vbTab & vbTab & " Daily Expenses " & My.Settings.myaddres & "", New Drawing.Font("Consolas", 10), Brushes.Black, 50, pr)
             pr += 16
-            'e.Graphics.DrawString(vbTab & vbTab & vbTab & vbTab & vbTab & "TEL: " + My.Settings.mytelno & "", New Drawing.Font("Consolas", 10), Brushes.Black, 50, pr)
-            'pr += 10
+
             e.Graphics.DrawString("_________________________________________________________________________________________________________________________________________________________________________________", New Drawing.Font("Berlin Sans FB Demi", 9), Brushes.Black, 10, pr)
             pr += 20
-            '   e.Graphics.DrawString("Store Id (" & My.Settings.settenstoreid & ")" & vbTab & vbTab & vbTab & DateTimePicker1.Value.ToString("MM/dd/yyyy"), New Drawing.Font("Berlin Sans FB Demi", 9), Brushes.Black, 30, pr)
-            '  pr += 0
-            'e.Graphics.DrawString(vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & "            Warehouse Report  ", New Drawing.Font("Berlin Sans FB Demi", 9), Brushes.Black, 50, pr)
-            'pr += 20
-            'e.Graphics.DrawString(vbTab & vbTab & vbTab & vbTab & vbTab & vbTab & "               Report     ", New Drawing.Font("Berlin Sans FB Demi", 9), Brushes.Black, 50, pr)
-            'pr += 10
-            'e.Graphics.DrawString("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------", New Drawing.Font("Berlin Sans FB Demi", 10), Brushes.Black, 0, pr)
-            'e.Graphics.DrawString("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------", New Drawing.Font("Berlin Sans FB Demi", 10), Brushes.Black, 0, pr)
+
             pr += 30
-            e.Graphics.DrawString("   Expense Id" & "            Amount" & "             By Whom" & "                    Reason" & "                                                                  Approve By" & "                    Date", New Drawing.Font("Berlin Sans FB Demi", 10), Brushes.Black, 0, pr)
+            e.Graphics.DrawString("   Expense Id" & "            Amount" & "             By Whom" & "                    Reason" & "                                                        Approve By" & "               Date", New Drawing.Font("Berlin Sans FB Demi", 10), Brushes.Black, 0, pr)
             pr += 30
-        End If
+
+            End If
 
         For Me.i_counter = i_start To ListView1.Items.Count - 1
 
@@ -286,23 +284,26 @@ Public Class dailyexpense
             e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(2).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 120, pr)
             e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(3).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 210, pr)
             e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(4).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 320, pr)
-            e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(5).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 650, pr)
-            e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(6).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 750, pr)
-            '  e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(7).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 700, pr)
+            e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(5).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 600, pr)
+            e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(6).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 700, pr)
+            'e.Graphics.DrawString(ListView1.Items(i_counter).SubItems(7).Text, New Drawing.Font("Consolas", 10), Brushes.Black, 700, pr)
 
             pr += 18
             linenumber += 1
-
+            '  MsgBox(linenumber & "ok")
             If linenumber = lineperpage Then
                 linenumber = 0
                 i_start = i_counter + 1
                 pr = 50
                 e.HasMorePages = True
                 Exit For
-
+                'Else
+                '    MsgBox(linenumber)
             End If
         Next
-        mydecrease -= 1
+        '   MsgBox(mydecrease)
+        mydecrease = mydecrease - 1
+        'MsgBox(mydecrease)
         If mydecrease = 0 Then
             e.Graphics.DrawString("_________________________________________________________________________", New Drawing.Font("Berlin Sans FB Demi", 9), Brushes.Black, 150, pr)
             pr += 13
@@ -312,7 +313,8 @@ Public Class dailyexpense
             pr += 18
             e.Graphics.DrawString("_________________________________________________________________________________________________________________________________________________________________________________", New Drawing.Font("Berlin Sans FB Demi", 9), Brushes.Black, 10, pr)
             pr += 18
-            e.Graphics.DrawString(vbTab & vbTab & vbTab & vbTab & "              Powered By CaterCode", New Drawing.Font("Berlin Sans FB Demi", 11), Brushes.Black, 50, pr)
+            e.Graphics.DrawString(vbTab & vbTab & vbTab & vbTab & "   Expense System Powered By CaterCode", New Drawing.Font("Consolas", 11), Brushes.Black, 50, pr)
+
         End If
     End Sub
 
@@ -344,7 +346,7 @@ Public Class dailyexpense
     Dim lineperpage As Integer
     Dim i_start As Integer
     Dim i_counter As Integer
-    Dim wholenumber As Integer '
+    Dim wholenumber As Double '
     Dim remainnumber As Integer '
     Dim sss As Integer
     Dim myincrement As Integer
@@ -356,13 +358,24 @@ Public Class dailyexpense
         mylistcount = ListView1.Items.Count
 
         wholenumber = mylistcount / lineperpage
-        remainnumber = Val(mylistcount) Mod lineperpage
-        If remainnumber <> 0 Then
+        If wholenumber <= 1.9 Then
+            wholenumber = 1
+        Else
             wholenumber += 1
+        End If
+
+        If mylistcount > lineperpage Then
+            ''  lineperpage += 1
+
+
             mydecrease = wholenumber
+
         Else
             lineperpage += 1
             mydecrease = wholenumber
+            'MsgBox(remainnumber & "1")
+
+
         End If
     End Sub
 
@@ -392,16 +405,16 @@ Public Class dailyexpense
     Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
 
         On Error Resume Next
-        linenumber = 0
-        lineperpage = 0
-        i_start = 0
-        i_counter = 0
-        wholenumber = 0
-        remainnumber = 0
-        sss = 0
-        myincrement = 0
-        mydecrease = 1
-        mylistcount = 0
+        'linenumber = 0
+        'lineperpage = 0
+        'i_start = 0
+        'i_counter = 0
+        'wholenumber = 0
+        'remainnumber = 0
+        'sss = 0
+        'myincrement = 0
+        'mydecrease = 1
+        'mylistcount = 0
 
         Me.TopMost = False
         If ListView1.Items.Count = 0 Then
@@ -452,6 +465,10 @@ Public Class dailyexpense
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles btnback.Click
         expensedata.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub BunifuCards3_Paint(sender As Object, e As PaintEventArgs) Handles BunifuCards3.Paint
+
     End Sub
 
     Private Sub cbsearch_TextChanged(sender As Object, e As EventArgs) Handles cbsearch.TextChanged

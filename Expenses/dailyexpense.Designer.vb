@@ -23,7 +23,7 @@ Partial Class dailyexpense
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dailyexpense))
         Me.BunifuCards3 = New Bunifu.Framework.UI.BunifuCards()
         Me.txtbudget = New System.Windows.Forms.TextBox()
@@ -65,10 +65,10 @@ Partial Class dailyexpense
         Me.my_animate = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnback = New System.Windows.Forms.Button()
         Me.tmpop = New System.Windows.Forms.Timer(Me.components)
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.btnback = New System.Windows.Forms.Button()
         Me.BunifuCards3.SuspendLayout()
         Me.BunifuCards2.SuspendLayout()
         CType(Me.btnsearch, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,7 +129,7 @@ Partial Class dailyexpense
         Me.Label3.Font = New System.Drawing.Font("Verdana", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(12, 181)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(367, 47)
+        Me.Label3.Size = New System.Drawing.Size(369, 47)
         Me.Label3.TabIndex = 194
         Me.Label3.Text = "Budget"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -142,7 +142,7 @@ Partial Class dailyexpense
         Me.lbltotal.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbltotal.Location = New System.Drawing.Point(2, 115)
         Me.lbltotal.Name = "lbltotal"
-        Me.lbltotal.Size = New System.Drawing.Size(364, 51)
+        Me.lbltotal.Size = New System.Drawing.Size(366, 51)
         Me.lbltotal.TabIndex = 193
         Me.lbltotal.Text = "00"
         Me.lbltotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -155,7 +155,7 @@ Partial Class dailyexpense
         Me.Label4.Font = New System.Drawing.Font("Verdana", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(-1, 53)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(367, 47)
+        Me.Label4.Size = New System.Drawing.Size(369, 47)
         Me.Label4.TabIndex = 192
         Me.Label4.Text = "Total Data"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -204,7 +204,7 @@ Partial Class dailyexpense
         Me.Label2.Font = New System.Drawing.Font("Agency FB", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(9, 350)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(364, 51)
+        Me.Label2.Size = New System.Drawing.Size(366, 51)
         Me.Label2.TabIndex = 188
         Me.Label2.Text = "GHs 0.00"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -217,7 +217,7 @@ Partial Class dailyexpense
         Me.Label1.Font = New System.Drawing.Font("Verdana", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 288)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(367, 47)
+        Me.Label1.Size = New System.Drawing.Size(369, 47)
         Me.Label1.TabIndex = 187
         Me.Label1.Text = "Total Amount Spent"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -567,22 +567,22 @@ Partial Class dailyexpense
         '
         Me.my_animate.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.my_animate.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.my_animate.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.my_animate.DefaultAnimation = Animation1
         '
         'PrintPreviewDialog1
         '
@@ -607,17 +607,6 @@ Partial Class dailyexpense
         Me.PictureBox2.TabIndex = 253
         Me.PictureBox2.TabStop = False
         '
-        'tmpop
-        '
-        Me.tmpop.Interval = 1000
-        '
-        'PrintDocument1
-        '
-        '
-        'PrintDialog1
-        '
-        Me.PrintDialog1.UseEXDialog = True
-        '
         'btnback
         '
         Me.btnback.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -632,6 +621,17 @@ Partial Class dailyexpense
         Me.btnback.TabIndex = 254
         Me.btnback.Text = "Back"
         Me.btnback.UseVisualStyleBackColor = False
+        '
+        'tmpop
+        '
+        Me.tmpop.Interval = 1000
+        '
+        'PrintDocument1
+        '
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
         '
         'dailyexpense
         '
